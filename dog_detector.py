@@ -12,7 +12,7 @@ class DogDetector:
         self.ResNet50_model = ResNet50(weights="imagenet")
         # global graph
         self.graph = tf.get_default_graph()
-        print('load model')
+        print('Dog detector ready')
 
     def prepare_image(self, image, target):
 

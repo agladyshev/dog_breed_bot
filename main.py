@@ -8,6 +8,8 @@ import json
 import io
 from PIL import Image
 from dog_detector import DogDetector
+from human_detector import HumanDetector
+
 
 # updater = Updater(token=os.environ.get('TOKEN'))
 updater = Updater(token='579059922:AAHyb14wI8jf6Qxgx-4QqOyCKj6O_Xw2osQ')
@@ -17,6 +19,7 @@ logging.basicConfig(
     level=logging.INFO)
 
 dogDetector = DogDetector()
+humanDetector = HumanDetector()
 
 def whatBreed(bot, update):
 
@@ -24,18 +27,17 @@ def whatBreed(bot, update):
     image = open('input.jpg', 'rb')
     image = image.read()
     image = Image.open(io.BytesIO(image))
-    # try:
-    #   is_dog = dogDetector.detect(image=image)
-    # except:
-    #   sys.exit(1)
-    is_dog = dogDetector.detect(image=image)
-    print(is_dog)
-  
 
+    if dogDetector.detect(image=image):
+        bot.send_message(chat_id=update.message.chat_id,
+                     text='This is a dog')
+    elif humanDetector.detect('input.jpg'):
+        bot.send_message(chat_id=update.message.chat_id,
+                     text='This is a person')
+    else:
+        bot.send_message(chat_id=update.message.chat_id,
+                     text='No dog or person found')
 
-
-    bot.send_message(chat_id=update.message.chat_id,
-                     text=str(is_dog))
 
 handler = MessageHandler(Filters.photo, 
                          whatBreed)
