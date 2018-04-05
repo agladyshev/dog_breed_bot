@@ -1,5 +1,4 @@
 from keras.preprocessing import image                  
-from tqdm import tqdm
 import numpy as np
 
 def path_to_tensor(img_path):
