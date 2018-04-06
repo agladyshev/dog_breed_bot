@@ -1,0 +1,41 @@
+name: dog3
+channels:
+  - defaults
+dependencies:
+  - certifi=2018.1.18=py36_0
+  - freetype=2.8=h51f8f2c_1
+  - h5py=2.7.1=py36he54a1c3_0
+  - hdf5=1.10.1=h98b8871_1
+  - icc_rt=2017.0.4=h97af966_0
+  - intel-openmp=2018.0.0=8
+  - jpeg=9b=hb83a4c4_2
+  - keras=2.1.5=py36_0
+  - libpng=1.6.34=h79bbb47_0
+  - libprotobuf=3.5.1=he0781b1_0
+  - libtiff=4.0.9=h0f13578_0
+  - mkl=2018.0.2=1
+  - numpy=1.12.1=py36hf30b8aa_1
+  - olefile=0.45.1=py36_0
+  - opencv=3.3.1=py36h20b85fd_1
+  - pillow=5.0.0=py36h0738816_0
+  - pip=9.0.3=py36_0
+  - protobuf=3.5.1=py36h6538335_0
+  - python=3.6.5=h0c2934d_0
+  - pyyaml=3.12=py36h1d1928f_1
+  - scipy=1.0.1=py36hce232c7_0
+  - setuptools=39.0.1=py36_0
+  - six=1.11.0=py36h4db2310_1
+  - tensorflow=1.1.0=np112py36_0
+  - tk=8.6.7=hcb92d03_3
+  - vc=14=h0510ff6_3
+  - vs2015_runtime=14.0.25420=0
+  - werkzeug=0.14.1=py36_0
+  - wheel=0.31.0=py36_0
+  - wincertstore=0.2=py36h7fe50ca_0
+  - yaml=0.1.7=hc54c509_2
+  - zlib=1.2.11=h8395fce_2
+  - pip:
+    - future==0.16.0
+    - python-telegram-bot==10.0.1
+prefix: C:\Users\solmyr\Anaconda3\envs\dog3
+
